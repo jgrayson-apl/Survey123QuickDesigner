@@ -1,0 +1,43 @@
+.relevantPane {
+  position : relative;
+  height   : 100%;
+  width    : 100%;
+  margin   : 0;
+  padding  : 0;
+}
+
+.relevantPane-relevant-dialog .dijitSelectLabel {
+  color : #444;
+}
+
+.relevantPane .dijitNumberTextBox {
+  text-align : center;
+}
+
+.relevantPane-relevant-label {
+  height     : 25px;
+  padding    : 3px;
+  background : #ecf5d7;
+}
+
+.relevantPane-table {
+  display : table;
+  width   : 100%;
+}
+
+.relevantPane-table-row {
+  display : table-row;
+}
+
+.relevantPane-table-cell {
+  display        : table-cell;
+  vertical-align : middle;
+}
+
+.relevantPane .dijitButtonText {
+  font-size : small;
+}
+
+.relevant-error {
+  color : red !important;
+}

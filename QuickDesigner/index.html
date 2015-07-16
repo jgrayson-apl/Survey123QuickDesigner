@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey 123 Quick Designer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.13/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="index.css">
+    <script>
+      var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+      var dojoConfig = {
+        async: true,
+        parseOnLoad: true,
+        packages: [
+          /* JG */
+          {
+            name: "Survey",
+            location: package_path + '/Survey'
+          }
+        ]
+      };
+    </script>
+    <script src="http://js.arcgis.com/3.13/"></script>
+    <script>
+      require([
+        "dojo/ready",
+        /* JG */
+        "Survey/dijit/DesignerPane",
+        "dijit/layout/BorderContainer",
+        "dijit/layout/ContentPane"
+      ], function (ready, /* JG */ DesignerPane) {
+        ready(function () {
+
+          /* JG */
+          var quickDesignerPane = new DesignerPane({}, "survey-node");
+          quickDesignerPane.startup();
+
+        });
+      });
+    </script>
+  </head>
+  <body class="claro">
+    <div id="main-container" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:false">
+      <div id="main-top-pane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'">
+        <div id="survey123-node">
+          <div>
+            <a href="http://survey123.esri.com/#/home" target="_blank">Survey 123</a>
+          </div>
+          <div id="beta-node">BETA</div>
+        </div>
+        <div id="title-node">Quick Designer</div>
+        <div>
+          <a href="http://survey123.esri.com/resources/XLSFormSupport/" target="_blank">Ask Questions</a>
+        </div>
+      </div>
+      <div id="center-container" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
+        <!-- JG -->
+        <div id="survey-node"></div>
+      </div>
+    </div>
+  </body>
+</html>

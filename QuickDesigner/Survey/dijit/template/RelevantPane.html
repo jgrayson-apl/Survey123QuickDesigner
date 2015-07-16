@@ -1,0 +1,31 @@
+<div class="${baseClass}">
+  <div class="${baseClass}-table">
+    <div class="${baseClass}-table-row">
+      <div class="${baseClass}-table-cell" style="width:260px;">
+        <div>This question is only relevant if&nbsp;</div>
+      </div>
+      <div class="${baseClass}-table-cell" data-dojo-attach-point="relevantValueAsLabel">
+        <div class="${baseClass}-relevant-label" data-dojo-attach-point="relevantLabel"></div>
+      </div>
+      <div class="${baseClass}-table-cell" style="width:120px;text-align:right;">
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Set',title:'Set Relevant'" data-dojo-attach-point="editRelevantBtn" data-dojo-attach-event="onClick:_editRelevant"></div>
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Clear',title:'Clear Relevant'" data-dojo-attach-point="clearRelevantBtn" data-dojo-attach-event="onClick:_clearRelevant"></div>
+      </div>
+    </div>
+  </div>
+  <div class="${baseClass}-relevant-dialog" data-dojo-type="dijit/ConfirmDialog" data-dojo-props="title:'Set Relevant Question'" data-dojo-attach-point="relevantDialog" data-dojo-attach-event="execute:_relevantEditEnd">
+    <div class="${baseClass}-table-row">
+      <div class="${baseClass}-table-cell">
+        <select data-dojo-type="dijit/form/Select" data-dojo-props="labelAttr:'label',sortByLabel:false,style:{width:'300px'}" data-dojo-attach-point="relevantQuestionSelect" data-dojo-attach-event="onChange:_relevantQuestionChange"></select>
+      </div>
+      <div class="${baseClass}-table-cell">&nbsp;=&nbsp;</div>
+      <div class="${baseClass}-table-cell" data-dojo-attach-point="relevantValueAsNumber">
+        <input data-dojo-type="dijit/form/NumberTextBox" data-dojo-props="value:0.0,style:{width:'300px'},intermediateChanges:true" data-dojo-attach-point="relevantValueInput">
+      </div>
+      <div class="${baseClass}-table-cell" data-dojo-attach-point="relevantValueAsList">
+        <select data-dojo-type="dijit/form/Select" data-dojo-props="labelAttr:'label',sortByLabel:false,style:{width:'300px'}" data-dojo-attach-point="relevantValueSelect"></select>
+      </div>
+    </div>
+  </div>
+
+</div>

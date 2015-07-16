@@ -1,0 +1,25 @@
+<div class="${baseClass}">
+  <div class="${baseClass}-main-pane" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:false">
+    <div class="${baseClass}-left-pane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'left'">
+      <div class="${baseClass}-left-top-pane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'">
+        <div class="${baseClass}-export-node">
+          <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Preview in Survey123 App'" data-dojo-attach-point="previewSurveyButton" data-dojo-attach-event="onClick:_previewSurvey"></div>
+          <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Publish Survey'" data-dojo-attach-point="publishSurveyButton" data-dojo-attach-event="onClick:_publishSurvey"></div>
+          <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Display XML'" data-dojo-attach-point="previewXMLButton" data-dojo-attach-event="onClick:_displayXMLPreview"></div>
+          <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Display XML JSON'" data-dojo-attach-point="previewXMLJSONButton" data-dojo-attach-event="onClick:_displayXMLJSONPreview"></div>
+          <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Display JSON'" data-dojo-attach-point="previewJsonButton" data-dojo-attach-event="onClick:_displayJsonPreview"></div>
+          <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Export XForm'" data-dojo-attach-point="downloadButton" data-dojo-attach-event="onClick:_displayDownloadLink"></div>
+          <div class="${baseClass}-download-link">
+            <a href="" title="Download current Survey as XForm file..." data-dojo-attach-point="previewLinkNode"></a>
+          </div>
+        </div>
+      </div>
+      <div class="${baseClass}-left-tree-pane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
+        <div class="${baseClass}-tree-node" data-dojo-attach-point="treeNode"></div>
+      </div>
+    </div>
+    <div class="${baseClass}-container-pane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
+      <div class="${baseClass}-container" data-dojo-attach-point="formNode"></div>
+    </div>
+  </div>
+</div>

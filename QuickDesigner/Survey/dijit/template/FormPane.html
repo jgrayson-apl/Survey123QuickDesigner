@@ -1,0 +1,27 @@
+<div class="${baseClass}">
+  <div class="${baseClass}-main-pane" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:false">
+    <div class="${baseClass}-top-pane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'">
+      <div class="${baseClass}-name" data-dojo-type="dijit/InlineEditBox" data-dojo-props="editor:'dijit/form/TextBox'" data-dojo-attach-point="nameInput" data-dojo-attach-event="onChange:_nameChange"></div>
+      <div class="${baseClass}-title" data-dojo-type="dijit/InlineEditBox" data-dojo-props="editor:'dijit/form/TextBox'" data-dojo-attach-point="titleInput" data-dojo-attach-event="onChange:_titleChange"></div>
+    </div>
+    <div class="${baseClass}-container-pane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
+      <div data-dojo-attach-point="containerNode"></div>
+    </div>
+    <div class="${baseClass}-bottom-pane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom'">
+      <div class="${baseClass}-table-row">
+        <div class="${baseClass}-table-cell">
+          <span class="${baseClass}-read-name" data-dojo-attach-point="nameRead"></span>
+        </div>
+        <div class="${baseClass}-table-cell">
+          <div data-dojo-type="dijit/form/ComboButton" data-dojo-props="label:'Add'">
+            <div data-dojo-type="dijit/DropDownMenu">
+              <!--<div data-dojo-type="dijit/MenuItem" data-dojo-props="label:'New Question',title:'Add new question'" data-dojo-attach-event="onClick:_newQuestion"></div>-->
+              <div data-dojo-type="dijit/MenuItem" data-dojo-props="label:'New Repeat',title:'Add new repeat'" data-dojo-attach-event="onClick:_newRepeat"></div>
+              <div data-dojo-type="dijit/MenuItem" data-dojo-props="label:'New Group',title:'Add new group'" data-dojo-attach-event="onClick:_newGroup"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

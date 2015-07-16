@@ -1,0 +1,76 @@
+.groupPane {
+  position         : relative;
+  /*width            : 100%;*/
+  height           : 100%;
+  margin           : 10px 0;
+  padding          : 0;
+  background-color : #f6f8f1;
+  border           : solid 2px #cad5b0;
+  border-radius    : 3px;
+}
+
+.groupPane-container {
+  margin  : 10px 5px 5px 15px !important;
+  padding : 5px 5px 5px 10px !important;
+}
+
+.groupPane-options {
+  margin-left : 15px;
+  width       : 80%;
+}
+
+.groupPane-relevant-pane {
+  margin : 0 10px 0 25px !important;
+}
+
+.groupPane-read-label {
+  margin-left : 25px !important;
+}
+
+.groupPane-isRepeat {
+  position   : absolute;
+  top        : 10px;
+  right      : 10px;
+  width      : 24px;
+  height     : 24px;
+  background : url(../images/Synchronize24.gif) no-repeat;
+}
+
+.groupPane-title {
+  margin    : 5px;
+  font-size : 15pt;
+  color     : dodgerblue;
+}
+
+.groupPane-action-node {
+  font-size  : smaller;
+  transition : opacity 0.5s;
+}
+
+.groupPane-label-path {
+  color            : red;
+  background-color : yellow;
+  font-weight      : bolder;
+  padding          : 5px;
+  margin-left      : 20px;
+  box-shadow       : 0 0 3px gray;
+}
+
+.groupPane-container {
+  transition    : background 1s;
+  border-radius : 3px;
+}
+
+.groupPane-container:hover {
+  /*background : #cad5b0;*/
+  /*background : #d8e1c3;*/
+}
+
+.groupPane-table-row {
+  display : table-row;
+}
+
+.groupPane-table-cell {
+  display     : table-cell;
+  line-height : 2em;
+}

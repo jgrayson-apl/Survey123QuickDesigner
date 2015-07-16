@@ -1,0 +1,218 @@
+.designerPane {
+  position         : relative;
+  width            : 100%;
+  height           : 100%;
+  margin           : 0;
+  padding          : 0;
+  font-family      : "Lucida Grande", verdana, arial, sans-serif;
+  background-color : #f6f8f1;
+}
+
+.designerPane-main-pane {
+  width  : 100%;
+  height : 100%;
+}
+
+.designerPane-left-pane {
+  width : 300px;
+}
+
+.designerPane-left-pane .dijitContentPane {
+  padding : 2px !important;
+}
+
+.designerPane-export-node {
+  height     : auto;
+  text-align : center;
+}
+
+.designerPane-download-link {
+  height : 1.5em;
+}
+
+.designerPane-export-node .dijitButtonNode {
+  width : 250px;
+}
+
+.designerPane-tree-node, .designerPane-export-node {
+  margin           : 5px;
+  padding          : 5px;
+  background-color : #fff;
+  border           : solid 1px #cbe787;
+  border-radius    : 3px;
+}
+
+.dijitTreeExpando {
+  display : none;
+}
+
+.claro .dijitTreeRow {
+  padding-top    : 2px !important;
+  padding-bottom : 2px !important;
+  border         : solid 1px transparent;
+}
+
+.claro .dijitTreeRowHover {
+  background-color : rgba(190, 255, 139, 0.5) !important;
+  border-color     : transparent !important;
+}
+
+.claro .dijitTreeRowSelected {
+  background-color : rgba(166, 227, 41, 0.5) !important; /*#d6f192*/
+  border-color     : transparent !important;
+}
+
+.claro .dijitTreeNode {
+  background : url('../images/i.png') repeat-y;
+}
+
+.claro .dijitTreeExpandoLeaf, .dj_ie6 .claro .dijitTreeExpandoLeaf {
+  background-image : url('../images/treeExpand_leaf.png');
+}
+
+/*.claro .dijitTreeIsLast {
+  background : url('./images/i_half.png') no-repeat;
+}*/
+
+/*.claro .dijitTreeIsRoot {
+  background-image : url('./images/i.png');
+}*/
+
+.designerPane .dijitButtonNode {
+  background : #aad04c !important;
+  border     : none !important;
+}
+
+.designerPane .dijitButtonNode:hover {
+  box-shadow : 0 0 5px #ccd7b2 !important;
+}
+
+.designerPane .dijitButtonText {
+  color       : #fff;
+  font-weight : bolder;
+  padding     : 4px !important;
+}
+
+.designerPane .dijitButtonDisabled .dijitButtonText {
+  color : #ccd7b2;
+}
+
+.claro .dijitSelect .dijitArrowButtonInner, .claro .dijitComboBox .dijitArrowButtonInner {
+  background-image : url("../images/commonFormArrows.png") !important;
+}
+
+.claro .dijitArrowButtonInner {
+  background-image : url("../images/buttonArrows.png") !important;
+}
+
+.claro .dijitTextBoxHover {
+  background-color : #e4ffed;
+}
+
+.claro .dijitMenu .dijitMenuItemHover td, .claro .dijitMenu .dijitMenuItemSelected td, .claro .dijitMenuItemHover, .claro .dijitComboBoxMenu .dijitMenuItemHover, .claro .dijitMenuItemSelected {
+  background-color : #e4ffed;
+}
+
+.claro .dijitSelectHover {
+  background-color : #e4ffed;
+}
+
+.dijitInlineEditBoxDisplayModeHover, .dj_a11y .dijitInlineEditBoxDisplayModeHover, .dj_ie6 .dijitInlineEditBoxDisplayModeHover {
+  background-color : #e4ffed !important;
+  border           : 1px solid #618239 !important;
+}
+
+.iconFormItem {
+  margin-bottom : 2px;
+  width         : 16px;
+  height        : 16px;
+}
+
+.iconForm {
+  background : url(../images/GenericDocument16.png) top;
+}
+
+.iconGroup {
+  background : url(../images/GenericDatasetFile16.png) center;
+}
+
+.iconRepeat {
+  background : url(../images/GenericRefresh_B_16.png) center;
+}
+
+.iconQuestion {
+  background : url(../images/GenericInformation16.png) center no-repeat;
+}
+
+.labelFormItem {
+  font-size   : smaller;
+  font-weight : bolder;
+}
+
+.relevant {
+  border-bottom : 3px dotted #ff0000;
+}
+
+.labelForm {
+  color : #92b747;
+}
+
+.labelGroup {
+  color : #63a2dc;
+}
+
+.labelRepeat {
+  color : #63a2dc;
+}
+
+.labelQuestion {
+  color : darkorange;
+}
+
+.dijitFieldset {
+  background-color : #f1f8f1;
+  border           : solid 1px rgb(216, 225, 195);
+  color            : #555
+}
+
+.dijitFieldsetLegendNode {
+  color     : #618239;
+  font-size : medium;
+}
+
+.dijitDialog {
+  border        : 1px solid #92b747 !important;
+  border-radius : 3px;
+  box-shadow    : 0 1px 5px #ccc !important;
+}
+
+.dijitDialogTitleBar {
+  background   : #a9d04d !important;
+  border-color : #a9d04d !important;
+}
+
+.dijitDialogTitle {
+  color     : #fff !important;
+  font-size : larger !important;
+}
+
+.dijitDialogPaneContent {
+  border-color : #a9d04d !important;
+}
+
+.dijitDialogPaneActionBar {
+  background-color : #d6dfc1 !important;
+}
+
+.dijitDialog .dijitButtonNode {
+  background   : #a9d04d !important;
+  border-color : #92b747 !important;
+}
+
+.dijitDialog .dijitButtonNode:hover {
+  border-color : #fff !important;
+}
+
+.dijitDialog .dijitButtonText {
+  color : #fff !important;
+}

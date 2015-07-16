@@ -1,0 +1,129 @@
+.questionPane {
+  position         : relative;
+  height           : 100%;
+  margin           : 10px 0;
+  padding          : 0;
+  background-color : #f6f8f1;
+  border           : solid 2px #cad5b0;
+  border-radius    : 3px;
+}
+
+.questionPane:hover {
+  border     : solid 2px #cad5b0;
+  box-shadow : 0 0 3px #aad04c;
+}
+
+.questionPane.editing {
+  border     : solid 2px #aad04c;
+  box-shadow : 0 0 6px #aad04c;
+}
+
+.questionPane-container {
+  margin : 5px;
+}
+
+.questionPane-tools {
+  opacity    : 0.0;
+  position   : absolute;
+  top        : 5px;
+  right      : 5px;
+  z-index    : 99;
+  transition : opacity 0.5s;
+}
+
+.questionPane:hover > .questionPane-tools {
+  opacity : 1.0;
+}
+
+.questionPane-table {
+  display : table;
+  width   : 100%;
+}
+
+.questionPane-table-row {
+  display : table-row;
+}
+
+.questionPane-table-cell {
+  display        : table-cell;
+  vertical-align : middle;
+}
+
+.left-cell {
+  width : 100px;
+}
+
+.right-cell {
+  text-align : right;
+}
+
+.questionPane-choices {
+  width   : 60%;
+  margin  : 5px 0;
+  padding : 5px;
+}
+
+.questionPane .dijitTitlePaneTitle {
+  background : #ccd7b2 !important;
+}
+
+.questionPane .dijitSelectLabel {
+  color : #444;
+}
+
+.questionPane .dijitNumberTextBox {
+  text-align : center;
+}
+
+.questionPane-edit {
+  /*background-color : #fafafa;*/
+}
+
+.questionPane-read {
+  cursor : pointer;
+}
+
+.questionPane-read-label {
+  font-size   : 13pt;
+  color       : darkorange;
+  font-weight : bolder;
+}
+
+.questionPane-read-hint {
+  color : gray;
+}
+
+.questionPane-choice-actions {
+  margin-top : 10px;
+}
+
+.questionPane .dijitButtonText {
+  font-size : small;
+}
+
+.questionPane .remove-choice {
+  color          : #aad04c;
+  vertical-align : middle;
+}
+
+.questionPane .remove-choice:hover {
+  cursor : pointer;
+  color  : red !important;
+}
+
+.questionPane-other-node {
+  margin : 3px;
+}
+
+.questionPane .other-node {
+  display : table-row;
+}
+
+.questionPane .other-node .other-label {
+  display : table-cell;
+}
+
+.questionPane .other-node .remove-choice {
+  display : table-cell;
+}
+

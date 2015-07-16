@@ -1,0 +1,142 @@
+<div class="${baseClass}">
+  <div class="${baseClass}-container" data-dojo-type="dijit/layout/StackContainer" data-dojo-props="doLayout:false" data-dojo-attach-point="containerNode">
+    <div class="${baseClass}-edit" data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="editPane">
+      <div class="${baseClass}-table">
+        <div class="${baseClass}-table-row">
+          <div class="${baseClass}-table-cell left-cell">Label</div>
+          <div class="${baseClass}-table-cell">
+            <div style="padding:3px 0;">
+              <input data-dojo-type="dijit/form/TextBox" data-dojo-attach-point="labelInput" data-dojo-props="intermediateChanges:true,style:{width:'70%'}" data-dojo-attach-event="onChange:_labelChange">
+            </div>
+          </div>
+          <div class="${baseClass}-table-cell"></div>
+        </div>
+        <div class="${baseClass}-table-row">
+          <div class="${baseClass}-table-cell left-cell">Hint</div>
+          <div class="${baseClass}-table-cell">
+            <div style="padding:3px 0;">
+              <input data-dojo-type="dijit/form/TextBox" data-dojo-attach-point="hintInput" data-dojo-props="intermediateChanges:true,style:{width:'70%'}" data-dojo-attach-event="onChange:_hintChange">
+            </div>
+          </div>
+          <div class="${baseClass}-table-cell"></div>
+        </div>
+        <div class="${baseClass}-table-row">
+          <div class="${baseClass}-table-cell">
+            <div style="padding:5px 0;">
+              <label for="${id}-required-chk">Required</label>
+            </div>
+          </div>
+          <div class="${baseClass}-table-cell">
+            <input id="${id}-required-chk" data-dojo-type="dijit/form/CheckBox" data-dojo-attach-point="requiredChk" data-dojo-attach-event="onChange:_requiredChange">
+          </div>
+        </div>
+        <div class="${baseClass}-table-row">
+          <div class="${baseClass}-table-cell left-cell">Type</div>
+          <div class="${baseClass}-table-cell">
+            <select data-dojo-type="dijit/form/Select" data-dojo-attach-point="typeSelect" data-dojo-props="labelAttr:'name',sortByLabel:false,style:{width:'275px'}" data-dojo-attach-event="onChange:_typeChange"></select>
+          </div>
+          <div class="${baseClass}-table-cell"></div>
+        </div>
+        <div class="${baseClass}-table-row">
+          <div class="${baseClass}-table-cell left-cell"></div>
+          <div class="${baseClass}-table-cell">
+            <div class="${baseClass}-choices dijitHidden" data-dojo-type="dijit/Fieldset" data-dojo-props="title:'Choices',open:true" data-dojo-attach-point="choicesListPane">
+              <div class="${baseClass}-list-node" data-dojo-attach-point="choicesListNode"></div>
+              <div class="${baseClass}-other-node dijitHidden" data-dojo-attach-point="choicesOtherNode">
+                <div class="other-node">
+                  <div class="other-label">Other</div>
+                  <div class="remove-choice" title="Don't allow 'Other'" data-dojo-attach-event="onClick:_removeOther">&nbsp;&#10799</div>
+                </div>
+              </div>
+              <div class="${baseClass}-choice-actions">
+                <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'New Choice'" data-dojo-attach-event="onClick:_addNewChoice"></div>
+                <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Allow Other'" data-dojo-attach-event="onClick:_addOther" data-dojo-attach-point="otherBtn"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="${baseClass}-advanced" data-dojo-type="dijit/Fieldset" data-dojo-props="title:'Relevant',open:false" data-dojo-attach-point="relevantPane"></div>
+      <div class="${baseClass}-advanced dijitHidden" data-dojo-type="dijit/Fieldset" data-dojo-props="title:'Appearance',open:true" data-dojo-attach-point="appearancePane">
+        <div class="${baseClass}-table-row">
+          <div class="${baseClass}-table-cell">
+            <select data-dojo-type="dijit/form/Select" data-dojo-attach-point="appearanceSelect" data-dojo-props="labelAttr:'name',sortByLabel:false,style:{width:'275px'}" data-dojo-attach-event="onChange:_appearanceChange"></select>
+          </div>
+        </div>
+      </div>
+      <div class="${baseClass}-advanced dijitHidden" data-dojo-type="dijit/Fieldset" data-dojo-props="title:'Constraint',open:true" data-dojo-attach-point="constraintPane">
+        <div class="${baseClass}-table-row">
+          <div class="${baseClass}-table-cell left-cell">Constraint</div>
+          <div class="${baseClass}-table-row">
+            <div class="${baseClass}-table-cell">
+              <select class="constraint-input" data-dojo-type="dijit/form/Select" data-dojo-attach-point="compareOperatorSelect" data-dojo-props="sortByLabel:false,style:{width:'200px'}" data-dojo-attach-event="onChange:_constraintOperatorChange">
+                <option value="=">Equal to</option>
+                <option value="&lt;">Less than</option>
+                <option value="&gt;">Greater than</option>
+                <option value="&lt;=">Less than or equal to</option>
+                <option value="&gt;=">Greater than or equal to</option>
+                <option value="between">Between</option>
+                <option value="notbetween">Not Between</option>
+                <!--<option value="email">Email</option>-->
+                <option value="custom">Custom</option>
+              </select>
+            </div>
+            <div class="${baseClass}-table-cell constraint-option">
+              <input class="constraint-input" data-dojo-type="dijit/form/NumberTextBox" data-dojo-props="value:0.0,intermediateChanges:true,style:{width:'150px'}" data-dojo-attach-point="firstConstraintValue" data-dojo-attach-event="onChange:updateConstraintUI">
+            </div>
+            <div class="${baseClass}-table-cell constraint-between dijitHidden">
+              <div>&nbsp;and&nbsp;</div>
+            </div>
+            <div class="${baseClass}-table-cell constraint-between dijitHidden">
+              <input class="constraint-input" data-dojo-type="dijit/form/NumberTextBox" data-dojo-props="value:0.0,intermediateChanges:true,style:{width:'150px'}" data-dojo-attach-point="secondConstraintValue" data-dojo-attach-event="onChange:updateConstraintUI">
+            </div>
+            <div class="${baseClass}-table-cell constraint-custom-option dijitHidden">
+              <input data-dojo-type="dijit/form/TextBox" data-dojo-props="style:{width:'344px'},intermediateChanges:true" data-dojo-attach-point="constraintCustom" data-dojo-attach-event="onChange:updateConstraintUI">
+            </div>
+          </div>
+        </div>
+        <div class="${baseClass}-table-row" data-dojo-attach-point="constraintMessageNode">
+          <div class="${baseClass}-table-cell left-cell">Message</div>
+          <div class="${baseClass}-table-cell">
+            <input data-dojo-type="dijit/form/TextBox" data-dojo-props="style:{width:'545px'},intermediateChanges:true" data-dojo-attach-point="constraintMessage" data-dojo-attach-event="onChange:_constraintMessageChange">
+          </div>
+        </div>
+      </div>
+      <!--
+      <div class="${baseClass}-table-row">
+        <div class="${baseClass}-table-cell"></div>
+        <div class="${baseClass}-table-cell"></div>
+        <div class="${baseClass}-table-cell"></div>
+      </div>
+      -->
+    </div>
+    <div class="${baseClass}-read" data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="readPane" data-dojo-attach-event="onClick:_toggleEditing">
+      <div class="${baseClass}-read-label" data-dojo-attach-point="labelRead"></div>
+      <div class="${baseClass}-read-hint" data-dojo-attach-point="hintRead"></div>
+    </div>
+  </div>
+  <div class="${baseClass}-tools">
+    <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Edit',title:'Edit question'" data-dojo-attach-point="editBtn" data-dojo-attach-event="onClick:_toggleEditing"></div>
+    <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Copy',title:'Copy question'" data-dojo-attach-point="copyBtn" data-dojo-attach-event="onClick:_copy"></div>
+    <div data-dojo-type="dijit/form/Button" data-dojo-props="label:'Remove',title:'Remove question',iconClass:'dijitIconDelete'" data-dojo-attach-point="deleteBtn" data-dojo-attach-event="onClick:_delete"></div>
+  </div>
+  <!--<div class="${baseClass}-relevant-dialog" data-dojo-type="dijit/ConfirmDialog" data-dojo-props="title:'Set Relevant Question'" data-dojo-attach-point="relevantDialog" data-dojo-attach-event="execute:_relevantEditEnd">
+      <div class="${baseClass}-table-row">
+
+        <div class="${baseClass}-table-cell">
+          <select data-dojo-type="dijit/form/Select" data-dojo-props="labelAttr:'label',sortByLabel:false,style:{width:'300px'}" data-dojo-attach-point="relevantQuestionSelect" data-dojo-attach-event="onChange:_relevantQuestionChange"></select>
+        </div>
+
+        <div class="${baseClass}-table-cell">&nbsp;=&nbsp;</div>
+
+        <div class="${baseClass}-table-cell" data-dojo-attach-point="relevantValueAsNumber">
+          <input data-dojo-type="dijit/form/NumberTextBox" data-dojo-props="value:0.0,style:{width:'300px'},intermediateChanges:true" data-dojo-attach-point="relevantValueInput">
+        </div>
+
+        <div class="${baseClass}-table-cell" data-dojo-attach-point="relevantValueAsList">
+          <select data-dojo-type="dijit/form/Select" data-dojo-props="labelAttr:'label',sortByLabel:false,style:{width:'300px'}"  data-dojo-attach-point="relevantValueSelect"></select>
+        </div>
+
+      </div>
+  </div>-->
+</div>

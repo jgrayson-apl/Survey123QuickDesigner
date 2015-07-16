@@ -1,0 +1,54 @@
+.formPane {
+  position         : relative;
+  width            : 100%;
+  height           : 100%;
+  margin           : 0;
+  padding          : 0;
+  font-family      : "Lucida Grande", verdana, arial, sans-serif;
+  background-color : #f6f8f1;
+  /*border           : dotted 1px red;*/
+}
+
+.formPane-main-pane {
+  width   : 100%;
+  height  : 100%;
+  margin  : 0;
+  padding : 0;
+}
+
+.formPane-name {
+  margin      : 5px;
+  font-size   : 17pt;
+  font-weight : bolder;
+  color       : #aad04c;
+}
+
+.formPane-title {
+  margin    : 5px;
+  font-size : 13pt;
+  color     : gray;
+}
+
+.formPane-container-pane {
+  margin           : 5px;
+  padding          : 5px;
+  border           : solid 2px #ccd7b2;
+  border-radius    : 4px;
+
+  background-color : #f1f8f1;
+  overflow-y       : scroll;
+}
+
+.formPane-bottom-pane {
+  font-size : smaller;
+}
+
+.formPane-table-row {
+  display : table-row;
+}
+
+.formPane-table-cell {
+  display     : table-cell;
+  line-height : 2em;
+}
+

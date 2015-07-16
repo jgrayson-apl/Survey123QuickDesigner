@@ -1,0 +1,46 @@
+html, body, #main-container {
+  padding          : 0;
+  margin           : 0;
+  width            : 100%;
+  height           : 100%;
+  font-family      : "Lucida Grande", verdana, arial, sans-serif;
+  background-color : #f7f9f3;
+}
+
+:focus {
+  outline : none !important;
+}
+
+#main-top-pane {
+  color         : #fff;
+  background    : url("./images/sub-banner.png") no-repeat scroll 0 0 #a9d04d;
+  margin-top    : 2em;
+  margin-bottom : 1em;
+  padding       : 0.5em 10px;
+}
+
+#main-top-pane a {
+  color           : #fff;
+  text-decoration : none;
+}
+
+#main-top-pane a:hover {
+  text-decoration : underline;
+}
+
+#survey123-node {
+  position    : absolute;
+  right       : 10px;
+  text-align  : right;
+  font-size   : larger;
+  text-shadow : 0 0 3px #92b747;
+}
+
+#beta-node {
+  font-size : x-small;
+  color     : #e5eed0;
+}
+
+#title-node {
+  font-size : xx-large;
+}
